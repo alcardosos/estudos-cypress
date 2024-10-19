@@ -3,7 +3,6 @@ Funcionalidade: Cadastro no site Adopet
 Cenário: Realizar um cadastro no site com sucesso
 
 Passos:
-
 O usuário acessa a página de cadastro.
 O usuário preenche o campo "Nome".
 O usuário preenche o campo "E-mail" com um endereço de e-mail válido.
@@ -12,7 +11,7 @@ O usuário preenche o campo "Confirmação de Senha" com a mesma senha inserida 
 O usuário clica no botão "Cadastrar".
 
 Resultados Esperados:
-O sistema processa as informações fornecidas, efetua o cadastro e me direciona para a tela de login.
+O sistema processa as informações fornecidas, efetua o cadastro e direciona o usuário para a tela de login.
 
 Regra de Negócio:
 E-mail e senha são campos obrigatórios para o cadastro.
