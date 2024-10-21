@@ -13,3 +13,20 @@ O sistema processa as informações fornecidas, efetua o login e direciona o usu
 
 Regra de Negócio:
 E-mail e senha são campos obrigatórios para o cadastro.
+
+
+Cenário: Login com credênciais fora dos padrões
+
+Passos:
+O usuário acessa a página de login.
+O usuário preenche o campo "E-mail" com um e-mail fora do padrão (sem "@" e/ou ".com").
+O usuário preenche o campo "Senha" com uma senha fora do padrão ("123").
+O usuário clica no botão "Entrar"
+
+Resultados Esperados:
+O sistema valida os campos.
+O sistema exibe mensagens de erro indicando que os campos não foram preenchidos corretamente.
+
+Regra de Negócio:
+O e-mail deve ter um formato válido (com "@" e ".com").
+A senha deve conter ao menos 1 letra maiúscula, um número e ter entre 6 e 15 caracteres.

@@ -7,6 +7,6 @@ describe('Login', () => {
   it('Login com credenciais válidas', () => {
     cy.get('[data-test="input-loginEmail"]').type('alcardosos@hotmail.com');
     cy.get('[data-test="input-loginPassword"]').type('Teste123');
-    cy.contains('[data-test="submit-button"]').click();
+    cy.get('[data-test="submit-button"]').click();
   })
 })
