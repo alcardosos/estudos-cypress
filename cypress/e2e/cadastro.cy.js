@@ -21,4 +21,29 @@ describe('Cadastro', () => {
     cy.contains('Crie uma senha').should('be.visible');
     cy.contains('Repita a senha criada acima').should('be.visible');
   })
+
+  it('Cadastro sem informar nome', () => {
+    cy.get('[data-test="input-email"]').type('alcardosos04@gmail.com'); 
+    cy.get('[data-test="input-password"]').type('Teste123');
+    cy.get('[data-test="input-confirm-password"]').type('Teste123');
+    cy.get('[data-test="submit-button"]').click();
+  })
+
+  it('Cadastro com senhas divergêntes', () => {
+    cy.get('[data-test="input-name"]').type('Alan Almeida'); 
+    cy.get('[data-test="input-email"]').type('alcardosos@gmail.com'); 
+    cy.get('[data-test="input-password"]').type('Teste123'); 
+    cy.get('[data-test="input-confirm-password"]').type('Senha123'); 
+    cy.get('[data-test="submit-button"]').click();
+    cy.contains('As senhas não batem').should('be.visible');
+  })
+
+  it('Cadastro com senhas divergêntes', () => {
+    cy.get('[data-test="input-name"]').type('Alan'); 
+    cy.get('[data-test="input-email"]').type('alcardosos@hotmail.com'); 
+    cy.get('[data-test="input-password"]').type('Senha123'); 
+    cy.get('[data-test="input-confirm-password"]').type('Senha123'); 
+    cy.get('[data-test="submit-button"]').click();
+    cy.contains('Falha ao cadastrar!').should('be.visible');
+  })
 })
