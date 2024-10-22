@@ -1,4 +1,5 @@
 describe('Cadastro', () => {
+  
   beforeEach(() => { //Representa uma function 'Antes de cada'. Para rodar determinados comandos antes da execução do caso de teste
     cy.visit('https://adopet-frontend-cypress.vercel.app/'); //visita uma página web
     cy.get('[data-test="register-button"]').click(); //procura o elemento do botão 'Cadastrar' na tela e efetua o clique
