@@ -29,15 +29,15 @@ describe('Login', () => {
 
   it('Login com e-mail não cadastrado', () => {
     cy.get('[data-test="login-button"]').click();
-    cy.get('[data-test="input-loginEmail"]').type('alcardosos@gmail.com');
+    cy.get('[data-test="input-loginEmail"]').type('alcardosos@errado.com');
     cy.get('[data-test="input-loginPassword"]').type('Teste123');
     cy.get('[data-test="submit-button"]').click();
     cy.contains('Falha no login. Consulte suas credenciais.').should('be.visible');
   })
 
-  it('Login com e-mail não cadastrado', () => {
+  it('Login com senha não cadastrada', () => {
     cy.get('[data-test="login-button"]').click();
-    cy.get('[data-test="input-loginEmail"]').type('alcardosos@hotmail.com');
+    cy.get('[data-test="input-loginEmail"]').type('alcardosos@hotmail.com.com');
     cy.get('[data-test="input-loginPassword"]').type('Senha123');
     cy.get('[data-test="submit-button"]').click();
     cy.contains('Falha no login. Consulte suas credenciais.').should('be.visible');
