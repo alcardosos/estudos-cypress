@@ -32,4 +32,11 @@ describe('Login', () => {
     cy.login('alcardosos@hotmail.com', 'Senha123');
     cy.contains('Falha no login. Consulte suas credenciais.').should('be.visible');
   })
+
+  it('Tentativa de login com os campos em branco', () => {
+    cy.get('[data-test="login-button"]').click();
+    cy.get('[data-test="submit-button"]').click();
+    cy.contains('É necessário informar um endereço de email').should('be.visible');
+    cy.contains('Insira sua senha').should('be.visible');
+  })
 })

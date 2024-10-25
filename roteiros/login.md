@@ -75,3 +75,17 @@ O sistema exibe mensagens de erro indicando falha no login.
 
 Regra de Negócio:
 E-mail e senha devem ser compatíveis com o cadastro do usuário.
+
+
+Cenário: Tentativa de login com os campos em branco
+
+Passos:
+O usuário acessa a página de login.
+O usuário clica no botão "Entrar" sem informar e-mail e senha.
+
+Resultados Esperados:
+O sistema valida os campos.
+O sistema exibe mensagens de erro, informando a necessiade de preenchimento dos campos.
+
+Regra de Negócio:
+Deve ser inserido e-mail e senha válidos e cadastrados para efetuar o login.
