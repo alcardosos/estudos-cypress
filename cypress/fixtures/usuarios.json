@@ -1,34 +1,34 @@
 {
     "usuarios": [
       {
-        "name": "Peter Jason Quill",
-        "email": "peter.quill@alura.com.br",
-        "password": "Senha12345"
+        "name": "Tony Stark",
+        "email": "tony.stark@alura.com.br",
+        "password": "IronMan2024"
       },
       {
-        "name": "Gamora Zen Whoberi Ben Titan",
-        "email": "gamora@alura.com",
-        "password": "Senha123456"
+        "name": "Natasha Romanoff",
+        "email": "natasha.romanoff@alura.com.br",
+        "password": "BlackWidow2024"
       },
       {
-        "name": "Rocket Raccoon",
-        "email": "rocket.raccoon@alura.com",
-        "password": "Senha1234567"
+        "name": "Bruce Banner",
+        "email": "bruce.banner@alura.com.br",
+        "password": "HulkSmash2024"
       },
       {
-        "name": "Groot",
-        "email": "groot@alura.com.br",
-        "password": "Senha12345678"
+        "name": "Steve Rogers",
+        "email": "steve.rogers@alura.com.br",
+        "password": "Cap2024"
       },
       {
-        "name": "Drax",
-        "email": "drax@alura.com",
-        "password": "Senha123456789"
+        "name": "Clint Barton",
+        "email": "clint.barton@alura.com.br",
+        "password": "HawkEye2024"
       },
       {
-        "name": "Yondu Udonta",
-        "email": "youndu@alura.com.br",
-        "password": "Senha1234567890"
+        "name": "Wanda Maximoff",
+        "email": "wanda.maximoff@alura.com.br",
+        "password": "ScarletWitch24"
       }
     ]
-  }
+  }  
