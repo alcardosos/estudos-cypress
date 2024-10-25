@@ -1,8 +1,8 @@
 describe('Cadastro', () => {
   
-  beforeEach(() => { //Representa uma function 'Antes de cada'. Para rodar determinados comandos antes da execução do caso de teste
-    cy.visit('https://adopet-frontend-cypress.vercel.app/'); //visita uma página web
-    cy.get('[data-test="register-button"]').click(); //procura o elemento do botão 'Cadastrar' na tela e efetua o clique
+  beforeEach(() => { 
+    cy.visit('https://adopet-frontend-cypress.vercel.app/'); 
+    cy.get('[data-test="register-button"]').click(); 
   })
 
 
@@ -12,7 +12,7 @@ describe('Cadastro', () => {
 
   it('Tentativa de cadastro com os campos em branco', () => {
     cy.get('[data-test="submit-button"]').click();
-    cy.contains('É necessário informar um endereço de email').should('be.visible'); //Comando que verifica se a mensagem está visível na tela
+    cy.contains('É necessário informar um endereço de email').should('be.visible'); 
     cy.contains('Crie uma senha').should('be.visible');
     cy.contains('Repita a senha criada acima').should('be.visible');
   })
