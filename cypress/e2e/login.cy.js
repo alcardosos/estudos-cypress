@@ -1,7 +1,9 @@
 describe('Login', () => {
 
-  beforeEach(() => { //Representa uma function 'Antes de cada'. Para rodar determinados comandos antes da execução do caso de teste
-    cy.visit('https://adopet-frontend-cypress.vercel.app/');
+  beforeEach(() => {
+    cy.visit('https://adopet-frontend-cypress.vercel.app');
+    cy.intercept('POST', 'https://adopet-api-i8qu.onrender.com/adotante/login', {
+      statusCode: 400, }).as('stubPost');
   })
 
   it('Login com credenciais válidas', () => {
@@ -38,5 +40,12 @@ describe('Login', () => {
     cy.get('[data-test="submit-button"]').click();
     cy.contains('É necessário informar um endereço de email').should('be.visible');
     cy.contains('Insira sua senha').should('be.visible');
+  })
+
+  it('Deve falhar mesmo que os campos sejam preenchidos corretamente', () => {
+    cy.get('[data-test="login-button"]').click();
+    cy.login('alcrosos@hotmail.com', 'Teste123');
+    cy.wait('@stubPost');
+    cy.contains('Falha no login. Consulte suas credenciais.').should('be.visible');
   })
 })
